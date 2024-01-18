@@ -1,0 +1,19 @@
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Specifies the runner environment
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2  # Checks out your repository
+
+    - name: Set up GCP Cloud SDK
+      uses: google-github-actions/setup-gcloud@master
+      with:
+        service_account_key: ${{ secrets.GCP_SA_KEY }}  # Use the GCP service account key
+        project_id: formal-stratum-411512  # Your GCP project ID
+
+    # Add additional steps for deploying to GCP
+    - name: Deploy to GCP
+      run: |
+        # Your deployment commands here
+        # e.g., gcloud compute instances create ...
