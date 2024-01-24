@@ -5,14 +5,12 @@ from discord.ext import commands
 from openai_handler import openai_handler
 
 
-DISCORD_TOKEN = 'MTE5NzE1NTQ5MTUwNDE5NzcxMw.GSAjHs.0WqVVsnnQMA8uBykMooWInUEr9YChLh_sJthvc' 
 
 # Initialize Discord client
 intents = Intents.default()
 client = discord.Client(intents=intents)
 
 def connectto_discord():
-    DISCORD_TOKEN = 'MTE5NzE1NTQ5MTUwNDE5NzcxMw.GSAjHs.0WqVVsnnQMA8uBykMooWInUEr9YChLh_sJthvc' 
 
     # Initialize Discord client
     intents = Intents.default()
